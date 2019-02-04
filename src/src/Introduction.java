@@ -3,7 +3,9 @@ package src;
 //Vladimir Hardy
 //A program integrating skills learned form COP 2006
 public class Introduction {
-
+ //This is a header, 'public' is an access modifier
+ //Void is the return type, meaning this method doesn't return anything
+ //Method names should be in lowerCamelCase and be named with a verb
 	public static void main(String[] args) {
 
 		System.out.println("Welcome to my Integration Project introduction");
@@ -37,6 +39,8 @@ public class Introduction {
 		// integer, however the decimal is being truncated System.out.println(intValue);
 		// SALES_TAX = 0.30; Cannot change SALES_TAX because it's a final variable
 		System.out.println(SALES_TAX);
+		
+		
 
 	}
 

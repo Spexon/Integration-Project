@@ -5,20 +5,20 @@ import java.util.Scanner;
 //Vladimir Hardy
 //A program integrating skills learned form COP 2006
 public class Main {
-
+//main should be easy to read and call other methods
 	public static void main(String[] args) {
+	  
+	    Scanner input = new Scanner(System.in);
+		boolean playAgain = true; 
 
-		// boolean playAgain = true; //want to allow the user to choose whether they
-		// want to play again or not
-
-		// while (playAgain==(true)) {
+		while (playAgain) {
 		String word = "planet";
 		int lives = 5;
 		System.out.println("Welcome to my integration project, Hangman! "
 				+ "Your goal is to guess this word correctly, you get " + lives
 				+ " guesses to correctly answer the word or its game over." 
 				+ "\nGuess a letter in the space below!");
-		Scanner input = new Scanner(System.in);
+		
 		String guess = input.nextLine();
 
 		while (lives > 1) {
@@ -38,13 +38,16 @@ public class Main {
 		if (lives <= 1) {
 			System.out.println("You have ran out of guesses! "
 			+ "Would you like to play again? (Yes or No)");
-			Scanner restart = new Scanner(System.in);
-
-		} else {
-			// break;
-		}
-
+			String restart = input.nextLine();
+			if (restart.equals("yes")) {
+				playAgain = true;
+			}
+			else {
+				System.out.println("Thanks for playing!");
+				break;
+			}
+		} 	
 	}
-
+//this is a call, in the parentheses is an argument
+  }
 }
-//}
