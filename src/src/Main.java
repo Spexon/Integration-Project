@@ -14,6 +14,7 @@ public class Main {
 		while (playAgain) {
 		String word = "planet";
 		int lives = 5;
+		//this is a call, in the parentheses is an argument
 		System.out.println("Welcome to my integration project, Hangman! "
 				+ "Your goal is to guess this word correctly, you get " + lives
 				+ " guesses to correctly answer the word or its game over." 
@@ -25,6 +26,7 @@ public class Main {
 			if (guess.equals(word)) {
 				System.out.println("You guessed " + guess + " which is correct! "
 				+ "Congratulations you won!");
+				restartGame();
 				break;
 
 			} else {
@@ -34,7 +36,7 @@ public class Main {
 				guess = input.nextLine();
 			}
 		}
-
+		
 		if (lives <= 1) {
 			System.out.println("You have ran out of guesses! "
 			+ "Would you like to play again? (Yes or No)");
@@ -46,8 +48,15 @@ public class Main {
 				System.out.println("Thanks for playing!");
 				break;
 			}
-		} 	
+		}
 	}
-//this is a call, in the parentheses is an argument
+		input.close();
   }
+	public static String restartGame() {
+      Scanner input = new Scanner(System.in);
+      System.out.println("Would you like to play again?");
+      String restart = input.nextLine();
+      input.close();
+      return restart;
+    }
 }

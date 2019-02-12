@@ -6,7 +6,7 @@ public class Introduction {
  //This is a header, 'public' is an access modifier
  //Void is the return type, meaning this method doesn't return anything
  //Method names should be in lowerCamelCase and be named with a verb
-	public static void main(String[] args) {
+	public static void main(String[] args) { //cant have multiple mains!
 
 		System.out.println("Welcome to my Integration Project introduction");
 		// ctrl + space for sysout
@@ -39,8 +39,8 @@ public class Introduction {
 		// integer, however the decimal is being truncated System.out.println(intValue);
 		// SALES_TAX = 0.30; Cannot change SALES_TAX because it's a final variable
 		System.out.println(SALES_TAX);
-		
-		
+		Card myCard = new Card();
+		myCard.setSuite("Clubs");
 
 	}
 
