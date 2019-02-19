@@ -1,5 +1,7 @@
 package src;
 
+import java.util.Scanner;
+
 //Vladimir Hardy
 //A program integrating skills learned form COP 2006
 public class Introduction {
@@ -41,6 +43,12 @@ public class Introduction {
 		System.out.println(SALES_TAX);
 		Card myCard = new Card();
 		myCard.setSuite("Clubs");
+		 Scanner input = new Scanner(System.in);
+		 input = new Scanner(System.in);
+		 System.out.println("Type any negative number");
+		 double negativeNumber = input.nextDouble();
+		 double positiveNumber = Math.abs(negativeNumber);
+		 System.out.println("With Math.abs your number is now: " + positiveNumber);
 
 	}
 
