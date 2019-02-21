@@ -50,7 +50,18 @@ public class Introduction {
 		 double positiveNumber = Math.abs(negativeNumber);
 		 System.out.println("With Math.abs your number is now: " + positiveNumber);
 
+		 if (0 <= positiveNumber && positiveNumber <= 100) {
+			 System.out.println("Your number is between 0 and 100");
+		 }
+		 else {
+			 System.out.println("Your number is not between 0 and 100");
+		 }
+		 int grade = 90;
+			char finalLetter = (grade >= 90) ? 'A' : 'B'; 
+			//? is a ternary operator that has 3 values in it
+			System.out.println(finalLetter);
 	}
+	
 
 }
 /*
