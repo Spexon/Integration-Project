@@ -1,5 +1,7 @@
 package src;
 
+import java.util.Scanner;
+
 public class Main {
 
 	public static void main(String[] args) {
@@ -8,7 +10,10 @@ public class Main {
 		System.out.println("2. Hangman");
 		System.out.println("3. Cards");
 		
+		
 		int menu = 0;
+		Scanner input = new Scanner(System.in);
+		menu = input.nextInt();
 		switch (menu) {
 		case 1:
 			//call the other classes here
@@ -19,8 +24,10 @@ public class Main {
 		case 3:
 			//call the other classes here
 			break;
+		default:
+			System.out.println("Invalid number");
 		}
-		
+		input.close();
 	}
-
+	
 }
