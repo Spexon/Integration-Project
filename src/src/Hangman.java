@@ -20,7 +20,7 @@ public class Hangman {
 				+ "Your goal is to guess this word correctly, \nyou get " + lives
 				+ " guesses to correctly answer the word or its game over." 
 				+ "\nGuess a letter in the space below!");
-		String guess = input.nextLine();
+		String guess = input.next(); //<-- change string to char when array is working
 
 		while (lives >= 1) {
 			if (guess.equals(word)) {
@@ -49,6 +49,8 @@ public class Hangman {
 				break;
 			}
 		}
+		else {
+		}
 	}
 		input.close();
   }
@@ -58,19 +60,33 @@ public class Hangman {
 		return restartNum;
 	}
 	
-	public static String restartGame(boolean playAgain, Scanner input) { //This is a header. A parameter is inside parenthesis after string
-      //input = new Scanner(System.in);
+	public static String restartGame(boolean playAgain, Scanner input) { 
+	  //This is a header. A parameter is inside parenthesis after string
       System.out.println("Would you like to test your luck and play again? (Yes or No)");
       String restart = input.nextLine();
       if (restart.equals("yes")) {
+    	    System.out.println("Restarting...");
 			playAgain = true;
 	  }
 	  else {
 		System.out.println("Thanks for playing!");
-		playAgain = false;
+		//playAgain = false;
 	  }
-      //input.close(); makes program bug out when correctly guessing word
       return restart;
     }
+	public static String letters(String word, char letterP, char letterL) {
+		letterP = (word.charAt(0));
+		System.out.println(letterP);
+		/*if (letterP.equals(word.charAt(0))) {
+			
+		}*/
+		letterL = (word.charAt(1));
+		System.out.println(letterP);
+		/*if (letterP.equals(word.charAt(0))) {
+			
+		}*/
+	
+		return letters(word, letterP, letterL);
+	}
 	
 }

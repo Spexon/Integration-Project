@@ -5,27 +5,26 @@ import java.util.Scanner;
 public class Main {
 
 	public static void main(String[] args) {
-		//Make main menu driven
+		System.out.println("Choose an option below by typing a number to begin");
 		System.out.println("1. Introduction");
 		System.out.println("2. Hangman");
-		System.out.println("3. Cards");
-		
+		System.out.println("3. Calculator");
 		
 		int menu = 0;
 		Scanner input = new Scanner(System.in);
 		menu = input.nextInt();
 		switch (menu) {
 		case 1:
-			//call the other classes here
+			Introduction.main(args);
 			break;
 		case 2:
-			//call the other classes here
+			Hangman.main(args);
 			break;
 		case 3:
-			//call the other classes here
+			Calculator.main(args);
 			break;
 		default:
-			System.out.println("Invalid number");
+			System.out.println("Invalid selection, please choose a number");
 		}
 		input.close();
 	}

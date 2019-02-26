@@ -29,11 +29,11 @@ public class Introduction {
 		double doubleValue = 40.6;
 
 		// Print the sum of both integer variables on a new line.
-		System.out.println("The result of + with ints is " + (int1 + int2));
+		System.out.println("The sum of two integers is " + (int1 + int2));
 		// Print the sum of the double variables on a new line.
-		System.out.println("The result of + with doubles is " + (double1 + double2));
+		System.out.println("The sum of the same two doubles is " + (double1 + double2));
 		// Concatenate and print the String variables on a new line.
-		System.out.println("The result of + with Strings is " + (string1 + string2));
+		System.out.println("The sum of the same two numbers as strings are " + (string1 + string2));
 		// every time you switch from numbers to strings, clear using Scan.nextLine();
 		System.out.println(boolean1);
 		System.out.println(escape);
@@ -60,6 +60,12 @@ public class Introduction {
 			char finalLetter = (grade >= 90) ? 'A' : 'B'; 
 			//? is a ternary operator that has 3 values in it
 			System.out.println(finalLetter);
+			
+		System.out.println("Type an even or odd number");
+		double remainder = input.nextDouble();
+		
+		
+		input.close();
 	}
 	
 
