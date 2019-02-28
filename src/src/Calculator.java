@@ -2,7 +2,9 @@ package src;
 
 import java.util.Scanner;
 
-public class Calculator { //basic calculator
+//Vladimir Hardy
+//basic calculator
+public class Calculator { 
 	public static void main(String[]args) {
 	Scanner input = new Scanner(System.in);
 	System.out.println("Enter a numbers to add"); //addition of two numbers

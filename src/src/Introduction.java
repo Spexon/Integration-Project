@@ -5,10 +5,10 @@ import java.util.Scanner;
 //Vladimir Hardy
 //A program integrating skills learned form COP 2006
 public class Introduction {
- //This is a header, 'public' is an access modifier
- //Void is the return type, meaning this method doesn't return anything
- //Method names should be in lowerCamelCase and be named with a verb
-	public static void main(String[] args) { //cant have multiple mains!
+	// This is a header, 'public' is an access modifier
+	// Void is the return type, meaning this method doesn't return anything
+	// Method names should be in lowerCamelCase and be named with a verb
+	public static void main(String[] args) { // cant have multiple mains!
 
 		System.out.println("Welcome to my Integration Project introduction");
 		// ctrl + space for sysout
@@ -43,31 +43,68 @@ public class Introduction {
 		System.out.println(SALES_TAX);
 		Card myCard = new Card();
 		myCard.setSuite("Clubs");
-		 Scanner input = new Scanner(System.in);
-		 input = new Scanner(System.in);
-		 System.out.println("Type any negative number");
-		 double negativeNumber = input.nextDouble();
-		 double positiveNumber = Math.abs(negativeNumber);
-		 System.out.println("With Math.abs your number is now: " + positiveNumber);
+		Scanner input = new Scanner(System.in);
+		System.out.println("Type any negative number");
+		double negativeNumber = input.nextDouble();
+		double positiveNumber = Math.abs(negativeNumber);
+		System.out.println("With Math.abs your number is now: " + positiveNumber);
 
-		 if (0 <= positiveNumber && positiveNumber <= 100) {
-			 System.out.println("Your number is between 0 and 100");
-		 }
-		 else {
-			 System.out.println("Your number is not between 0 and 100");
-		 }
-		 int grade = 90;
-			char finalLetter = (grade >= 90) ? 'A' : 'B'; 
-			//? is a ternary operator that has 3 values in it
-			System.out.println(finalLetter);
-			
+		if (0 <= positiveNumber && positiveNumber <= 100) {
+			System.out.println("Your number is between 0 and 100");
+		} else {
+			System.out.println("Your number is not between 0 and 100");
+		}
+		int grade = 90;
+		char finalLetter = (grade >= 90) ? 'A' : 'B';
+		// ? is a ternary operator that has 3 values in it
+		System.out.println(finalLetter);
+
 		System.out.println("Type an even or odd number");
 		double remainder = input.nextDouble();
+		if (remainder % 2 != 0) {
+			System.out.println("Your number is odd");
+		} else {
+			System.out.println("Your number is even");
+		}
+		for (double i = 0; i != 5;) {
+			System.out.println("Try to guess a number between 0 and 20");
+			i = input.nextDouble();
+			if (i == 100) {
+				System.out.println("you found the easterEgg!");
+				int n = 5;
+				int o = 0;
+				int a = 0;
+				while (o < n) {
+					a = 1;
+					while (a <= n) {
+						if ((a + o) >= n) {
+							System.out.print("#");
+
+						} else {
+
+							System.out.print(" ");
+						}
+						a++;
+					}
+					System.out.println();
+					o += 1;
+				}
+			}
+		}
+		System.out.println("You guessed correctly!");
+
+		System.out.println("Guess a number between 0 and 20, again");
+		int number = input.nextInt();
+		int correctNumber = 10;
+		do {
+			System.out.println("Guess a number between 0 and 20, again");
+			number = input.nextInt();
+		} while (number != correctNumber);
+		System.out.println("Correct!");
 		
-		
+
 		input.close();
 	}
-	
 
 }
 /*
