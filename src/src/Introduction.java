@@ -123,7 +123,7 @@ public class Introduction {
       System.out.println("Your word is exactly the same");
     input.close();
   }
-
+//do you see this?
 }
 /*
  * All Variables on Java must be declared stating its type and name before they can be used. A
