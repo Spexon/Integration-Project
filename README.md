@@ -1,5 +1,7 @@
 # Integration-Project
-=============================================================PSI 1======================================================================
+
+PSI 1:
+
 Add your name as a comment at top of every file      (CLASS ALL LINE 4-6)
 
 Add a description of the program as a comment at top (CLASS ALL LINE 5-7)
@@ -27,7 +29,9 @@ Use final with a variable and describe what it means in a comment (CLASS INTRODU
 Use casting and describe what it means in a comment               (CLASS INTRODUCTION LINE 39)
 
 Format strings using escape sequences                             (CLASS INTRODUCTION LINE 25)
-=============================================================PSI 2======================================================================
+
+PSI 2:
+
 Create a method with arguments and return values    (CLASS HANGMAN LINE 66)
 
 Identify a method call and argument in comments     (CLASS HANGMAN LINE 34)
