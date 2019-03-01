@@ -47,7 +47,7 @@ Use a switch statement                              (CLASS MAIN LINE 18)
 Compare two String objects by using the compareTo and equals methods and make a comment describing how == works with objects 
 (CLASS INTRODUCTION LINE 119)
 
-Use +, -, *, /, %, ++, --, +=                       (CLASS CALCULATOR LINE 30, LINE 39, LINE 48, LINE 57, CLASS INTRODUCTION LINE 64,                                                       LINE 87, LINE 108, LINE 90)
+Use +, -, *, /, %, ++, --, +=                       (CLASS CALCULATOR LINE 30, LINE 39, LINE 48, LINE 57, CLASS INTRODUCTION LINE 64,  LINE 87, LINE 108, LINE 90)
 
 Use relational operators                            (CLASS INTRODUCTION LINE 52)
 
