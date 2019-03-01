@@ -26,7 +26,7 @@ public class Main {
 			Calculator.main(args);
 			break;
 		default:
-			System.out.println("Invalid selection, please choose a number");
+			System.out.println("Invalid selection, please type a number");
 		}
 		input.close();
 	}
