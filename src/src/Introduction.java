@@ -8,7 +8,7 @@ public class Introduction {
   // This is a header, 'public' is an access modifier
   // Void is the return type, meaning this method doesn't return anything
   // Method names should be in lowerCamelCase and be named with a verb
-  public static void main(String[] args) { // cant have multiple mains!
+  public static void intro() { // cant have multiple mains!
 
     System.out.println("Welcome to my Integration Project introduction");
     // ctrl + space for sysout

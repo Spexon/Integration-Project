@@ -11,24 +11,24 @@ public class Main {
 		System.out.println("1. Introduction");
 		System.out.println("2. Hangman");
 		System.out.println("3. Calculator");
-		
+
 		int menu = 0;
 		Scanner input = new Scanner(System.in);
 		menu = input.nextInt();
 		switch (menu) {
 		case 1:
-			Introduction.main(args);
+			Introduction.intro();
 			break;
 		case 2:
-			Hangman.main(args);
+			Hangman.hangman();
 			break;
 		case 3:
-			Calculator.main(args);
+			Calculator.calculateMain();
 			break;
 		default:
 			System.out.println("Invalid selection, please type a number");
 		}
 		input.close();
 	}
-	
+
 }

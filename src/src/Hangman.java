@@ -6,7 +6,7 @@ import java.util.Scanner;
 // Vladimir Hardy
 // A program integrating skills learned form COP 2006
 public class Hangman {
-  public static void main(String[] args) {
+  public static void hangman() {
 
     Scanner input = new Scanner(System.in);
     boolean playAgain = true;
@@ -36,7 +36,7 @@ public class Hangman {
         } else {
           lives--;
           System.out.println("Incorrect! you have " + lives + " guesses left");
-          input = new Scanner(System.in);
+          input = new Scanner(System.in); //Method call to constructor
         }
       }
 
