@@ -123,8 +123,8 @@ public class Introduction {
       System.out.println("Your word is exactly the same");
     input.close();
   }
-
 }
+
 /*
  * All Variables on Java must be declared stating its type and name before they can be used. A
  * primitive data type on Java is a special keyword that is already assigned to something, some

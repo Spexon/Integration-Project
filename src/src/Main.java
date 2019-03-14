@@ -11,6 +11,7 @@ public class Main {
 		System.out.println("1. Introduction");
 		System.out.println("2. Hangman");
 		System.out.println("3. Calculator");
+		System.out.println("4. Car");
 
 		int menu = 0;
 		Scanner input = new Scanner(System.in);
@@ -24,6 +25,9 @@ public class Main {
 			break;
 		case 3:
 			Calculator.calculateMain();
+			break;
+		case 4:
+			Car.car();
 			break;
 		default:
 			System.out.println("Invalid selection, please type a number");
