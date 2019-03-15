@@ -1,38 +1,41 @@
 package src;
 
 import java.util.Scanner;
-//Vladimir Hardy
-//Menu for all the classes in my integration project
+// Vladimir Hardy
+// Menu for all the classes in my integration project
 
 public class Main {
 
-	public static void main(String[] args) {
-		System.out.println("Choose an option below by typing a number to begin");
-		System.out.println("1. Introduction");
-		System.out.println("2. Hangman");
-		System.out.println("3. Calculator");
-		System.out.println("4. Car");
+  public static void main(String[] args) {
+    System.out.println("Choose an option below by typing a number to begin");
+    System.out.println("1. Introduction");
+    System.out.println("2. Hangman");
+    System.out.println("3. Calculator");
+    System.out.println("4. Car");
 
-		int menu = 0;
-		Scanner input = new Scanner(System.in);
-		menu = input.nextInt();
-		switch (menu) {
-		case 1:
-			Introduction.intro();
-			break;
-		case 2:
-			Hangman.hangman();
-			break;
-		case 3:
-			Calculator.calculateMain();
-			break;
-		case 4:
-			Car.car();
-			break;
-		default:
-			System.out.println("Invalid selection, please type a number");
-		}
-		input.close();
-	}
+    int menu = 0;
+    Scanner input = new Scanner(System.in);
+    menu = input.nextInt();
+    switch (menu) {
+      case 1:
+
+        Introduction.intro();
+        break;
+      case 2:
+        Hangman.hangman();
+        break;
+      case 3:
+        Calculator.calculateMain();
+        break;
+      case 4:
+        Car.car();
+        break;
+      default:
+        System.out.println("Invalid selection, please type a number");
+    }
+    input.close();
+  }
+
+
 
 }

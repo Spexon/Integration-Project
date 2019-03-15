@@ -6,6 +6,7 @@ import java.util.Scanner;
 // Vladimir Hardy
 // A program integrating skills learned form COP 2006
 public class Hangman {
+
   public static void hangman() {
 
     Scanner input = new Scanner(System.in);
@@ -36,7 +37,7 @@ public class Hangman {
         } else {
           lives--;
           System.out.println("Incorrect! you have " + lives + " guesses left");
-          input = new Scanner(System.in); //Method call to constructor
+          input = new Scanner(System.in); // Method call to constructor
         }
       }
 
@@ -63,7 +64,8 @@ public class Hangman {
     return restartNum;
   }
 
-  public static String restartGame(boolean playAgain, Scanner input) {
+  public static String restartGame(boolean playAgain, Scanner input) { 
+    //this playAgain is different to the playAgain at the top
     // This is a header. A parameter is inside parenthesis after string
     System.out.println("Would you like to test your luck and play again? (Yes or No)");
     String restart = input.nextLine();
@@ -72,6 +74,7 @@ public class Hangman {
       playAgain = true;
     } else {
       System.out.println("Thanks for playing!");
+      //playAgain = false; is unnecessary 
     }
     return restart;
   }
@@ -80,7 +83,7 @@ public class Hangman {
     int lengthWord = word.length();
     int lengthGuess = guess.length();
     int result = lengthWord - lengthGuess;
-    System.out.println("Your guess is " + result + " letters away from the word");
+    System.out.println("The word above is " + result + " letters away from the correct word");
     return result;
   }
 

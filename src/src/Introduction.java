@@ -1,15 +1,19 @@
 package src;
 
 import java.util.Scanner;
-//change?
+
+// change?
+
+
+
 // Vladimir Hardy
 // A program integrating skills learned form COP 2006, as well as fulfilling PSI requirements
 public class Introduction {
   // This is a header, 'public' is an access modifier
   // Void is the return type, meaning this method doesn't return anything
   // Method names should be in lowerCamelCase and be named with a verb
-  public static void intro() { // cant have multiple mains!
 
+  public static void intro() { // cant have multiple mains!
     System.out.println("Welcome to my Integration Project introduction");
     // ctrl + space for sysout
     final double SALES_TAX = 0.25; // Final makes the variable unchangeable throughout the code
@@ -65,32 +69,33 @@ public class Introduction {
     } else {
       System.out.println("Your number is even");
     }
-    for (double i = 0; i != 5;) {
+    for (double outerIncrement = 0; outerIncrement != 5;) {
       System.out.println("Try to guess a number between 0 and 20");
-      i = input.nextDouble();
-      if (i == 100) {
+      outerIncrement = input.nextDouble();
+      if (outerIncrement == 100) {
         System.out.println("you found the easterEgg!");
-        int n = 5;
-        int o = 0;
-        int a = 0;
-        while (o < n) {
-          a = 1;
-          while (a <= n) {
-            if ((a + o) >= n) {
+        int stepLimit = 5;
+        int innerIncrement = 0;
+        int innerIncrement2 = 0;
+        while (innerIncrement < stepLimit) {
+          innerIncrement2 = 1;
+          while (innerIncrement2 <= stepLimit) {
+            if ((innerIncrement2 + innerIncrement) >= stepLimit) {
               System.out.print("#");
 
             } else {
 
               System.out.print(" ");
             }
-            a++;
+            innerIncrement2++;
           }
           System.out.println();
-          o += 1;
+          innerIncrement += 1;
         }
       }
     }
     System.out.println("You guessed correctly!");
+
 
     int number;
     int correctNumber = 10;
@@ -110,7 +115,7 @@ public class Introduction {
         continue; // This skips the number 5 and continues to the next iteration
       }
     }
-    input.nextLine(); //Put this here to buffer from int to string scanner
+    input.nextLine(); // Put this here to buffer from int to string scanner
     System.out.println("Type any word");
     String userWord1 = input.nextLine();
     System.out.println("Type another word");
@@ -119,9 +124,10 @@ public class Introduction {
     System.out.println(
         "Your word is alphabetically/lexicographically " + lengthOfWord + " letters apart");
     if (userWord1.equals(userWord2))
-      //When comparing strings, you cannot use == because their location in memory isn't the same
+      // When comparing strings, you cannot use == because their location in memory isn't the same
       System.out.println("Your word is exactly the same");
     input.close();
+
   }
 }
 
