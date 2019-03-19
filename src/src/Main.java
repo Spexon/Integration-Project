@@ -1,6 +1,7 @@
 package src;
 
 import java.util.Scanner;
+
 // Vladimir Hardy
 // Menu for all the classes in my integration project
 
@@ -35,7 +36,4 @@ public class Main {
     }
     input.close();
   }
-
-
-
 }

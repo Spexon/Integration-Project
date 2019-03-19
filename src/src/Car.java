@@ -9,7 +9,7 @@ public class Car {
   private int yearOfCar;
 //Mutator Methods
   public void setModelOfCar(String model) { // can be any letter for setting a variable
-    modelOfCar = model;
+    modelOfCar = model; 
   }
 
   public void setMakeOfCar(String make) { //constructor variables don't have to be descriptive

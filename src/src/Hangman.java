@@ -86,5 +86,4 @@ public class Hangman {
     System.out.println("The word above is " + result + " letters away from the correct word");
     return result;
   }
-
 }

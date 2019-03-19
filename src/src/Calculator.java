@@ -7,7 +7,6 @@ import java.util.Scanner;
 
 public class Calculator {
 
-
   public static void calculateMain() {
 
     // boolean restart = true;
@@ -69,6 +68,5 @@ public class Calculator {
      * System.out.println("Have a nice day!"); }
      */
     input.close();
-
   }
 }
