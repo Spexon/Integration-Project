@@ -65,7 +65,7 @@ public class Hangman {
   }
 
   public static String restartGame(boolean playAgain, Scanner input) { 
-    //this playAgain is different to the playAgain at the top
+    //this playAgain is different to the playAgain at the top, i think
     // This is a header. A parameter is inside parenthesis after string
     System.out.println("Would you like to test your luck and play again? (Yes or No)");
     String restart = input.nextLine();
@@ -81,9 +81,25 @@ public class Hangman {
 
   public static int hintForWord(String word, String guess) {
     int lengthWord = word.length();
-    int lengthGuess = guess.length();
-    int result = lengthWord - lengthGuess;
-    System.out.println("The word above is " + result + " letters away from the correct word");
-    return result;
+    System.out.println("The word is " + lengthWord + " letters long");
+    return lengthWord;
+  }
+  
+  public static String arrayForWord() {
+    String[] array = new String[6];
+    array[0] = "p";
+    array[1] = "l";
+    array[2] = "a";
+    array[3] = "n";
+    array[4] = "e";
+    array[5] = "t";
+    int increment = 0;
+    while(increment<6) {
+     String letter = array[increment];
+     increment++;
+     String word = letter;
+     return word;
+    }
+    
   }
 }

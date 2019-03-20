@@ -128,6 +128,21 @@ public class Introduction {
       System.out.println("Your word is exactly the same");
     input.close();
 
+      String[] array = new String[6]; //delete this when it works
+      array[0] = "p";
+      array[1] = "l";
+      array[2] = "a";
+      array[3] = "n";
+      array[4] = "e";
+      array[5] = "t";
+      int increment = 0;
+      while(increment<6) {
+       String letter = array[increment];
+       increment++;
+       System.out.print(letter);
+       String word = letter;
+      }
+      
   }
 }
 
