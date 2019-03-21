@@ -11,9 +11,16 @@ public class Hangman {
 
     Scanner input = new Scanner(System.in);
     boolean playAgain = true;
-
+    /*String[] word = arrayForWord();
+    int increment=0;
+    String letter;
+	while(increment<6) {
+	     letter = arrayForWord()[increment];
+	     increment++;
+	}*/
     while (playAgain) {
       String word = "planet";
+    
       String hint = "hint";
       int lives = 5;
 
@@ -85,7 +92,7 @@ public class Hangman {
     return lengthWord;
   }
   
-  public static String arrayForWord() {
+  public static String[] arrayForWord() {
     String[] array = new String[6];
     array[0] = "p";
     array[1] = "l";
@@ -93,13 +100,8 @@ public class Hangman {
     array[3] = "n";
     array[4] = "e";
     array[5] = "t";
-    int increment = 0;
-    while(increment<6) {
-     String letter = array[increment];
-     increment++;
-     String word = letter;
-     return word;
-    }
-    
+    return array;
   }
 }
+//Suggestion: Make a while loop with two conditions, is the LETTER of guess equal to the LETTER of the word? 
+//if yes plug that letter into word array
