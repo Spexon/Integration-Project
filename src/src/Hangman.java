@@ -11,16 +11,13 @@ public class Hangman {
 
     Scanner input = new Scanner(System.in);
     boolean playAgain = true;
-    /*String[] word = arrayForWord();
-    int increment=0;
-    String letter;
-	while(increment<6) {
-	     letter = arrayForWord()[increment];
-	     increment++;
-	}*/
+    /*
+     * String[] word = arrayForWord(); int increment=0; String letter; while(increment<6) { letter =
+     * arrayForWord()[increment]; increment++; }
+     */
     while (playAgain) {
-      String word = "planet";
-    
+      String word = "planet"; // create a new class for this (String word = new word)
+
       String hint = "hint";
       int lives = 5;
 
@@ -28,19 +25,34 @@ public class Hangman {
           + "Your goal is to guess this word correctly, \nyou get guesses " + lives
           + " to correctly answer the word or its game over. Type \'hint\' for a hint."
           + "\nGuess a letter in the space below!");
-
+      String letterTracker = "";
       String guess;// <-- change string to char when array is working
-
+      String underscore = "______";
+      String letterP = word.substring(0, 1);
+      String letterL = word.substring(1, 2);
+      String letterA = word.substring(2, 3);
+      String letterN = word.substring(3, 4);
+      String letterE = word.substring(4, 5);
+      String letterT = word.substring(5, 6);
       while (lives >= 1) {
         guess = input.nextLine();
         if (guess.equalsIgnoreCase(hint)) {
           hintForWord(word, guess);
           // System.out.println("The word is an outer space entity");
         } else if (guess.equalsIgnoreCase(word)) {
-          System.out
-              .println("You guessed " + guess + " which is correct! " + "Congratulations you won!");
-          restartGame(playAgain, input); // This is a call, in parenthesis would be an argument
+          restartGame(playAgain, input, guess); // This is a call, in parenthesis would be an argument
           break; // Quits the loop when user guesses the correct word
+        } else if (guess.equalsIgnoreCase(letterP) || guess.equalsIgnoreCase(letterL)
+            || guess.equalsIgnoreCase(letterA) || guess.equalsIgnoreCase(letterN)
+            || guess.equalsIgnoreCase(letterE) || guess.equalsIgnoreCase(letterT)) {
+          letterTracker += guess;
+          System.out.println(letterTracker);
+          System.out.println("Your letter is correct! Current letters: " + underscore);
+          if (letterTracker.equalsIgnoreCase(word)) {
+            guess = letterTracker;
+            restartGame(playAgain, input, guess);
+            break;
+          }
         } else {
           lives--;
           System.out.println("Incorrect! you have " + lives + " guesses left");
@@ -50,18 +62,18 @@ public class Hangman {
 
       if (lives <= 0) {
         System.out
-            .println("You have ran out of guesses! " + "Would you like to play again? (Yes or No)");
+            .println("You have ran out of guesses! Would you like to play again? (Yes or No)");
         String restart = input.nextLine();
-        if (restart.equals("yes")) {
+        if (restart.equalsIgnoreCase("yes")) {
           playAgain = true;
         } else {
           System.out.println("Thanks for playing!");
+          playAgain = false;
           break; // Quits the loop when user decides to stop playing
         }
       } else {
       }
     }
-    playAgain = false;
     input.close();
   }
 
@@ -71,9 +83,9 @@ public class Hangman {
     return restartNum;
   }
 
-  public static String restartGame(boolean playAgain, Scanner input) { 
-    //this playAgain is different to the playAgain at the top, i think
+  public static String restartGame(boolean playAgain, Scanner input, String guess) {
     // This is a header. A parameter is inside parenthesis after string
+    System.out.println("You guessed " + guess + " which is correct! " + "Congratulations you won!");
     System.out.println("Would you like to test your luck and play again? (Yes or No)");
     String restart = input.nextLine();
     if (restart.equalsIgnoreCase("yes")) {
@@ -81,7 +93,7 @@ public class Hangman {
       playAgain = true;
     } else {
       System.out.println("Thanks for playing!");
-      //playAgain = false; is unnecessary 
+      //playAgain = false; //doesn't do anything
     }
     return restart;
   }
@@ -91,17 +103,5 @@ public class Hangman {
     System.out.println("The word is " + lengthWord + " letters long");
     return lengthWord;
   }
-  
-  public static String[] arrayForWord() {
-    String[] array = new String[6];
-    array[0] = "p";
-    array[1] = "l";
-    array[2] = "a";
-    array[3] = "n";
-    array[4] = "e";
-    array[5] = "t";
-    return array;
-  }
 }
-//Suggestion: Make a while loop with two conditions, is the LETTER of guess equal to the LETTER of the word? 
-//if yes plug that letter into word array
+
