@@ -21,6 +21,8 @@ public class Main {
       case 1:
 
         Introduction.intro();
+        Introduction.normalMethod();
+        MethodOverride.normalMethod();
         break;
       case 2:
         Hangman.hangman();
@@ -30,6 +32,7 @@ public class Main {
         break;
       case 4:
         Car.car();
+        SUV.pimpedOutSUV();
         break;
       default:
         System.out.println("Invalid selection, please type a number");
