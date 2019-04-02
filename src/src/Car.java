@@ -47,12 +47,12 @@ public class Car {
     Car myCar = new Car("SUV", "Ford", 2015); 
     System.out.println(myCar);
     //Car momsCar = new Car("Ford");
-    
   }
 }
+
 class SUV extends Car {
-  static int maxSpeed = 120;
-  static void pimpedOutSUV() {
+  int maxSpeed = 120;
+  void pimpedOutSUV() {
     System.out.println("My pimped out SUV drives " + super.maxSpeed + " miles per hour");
   }
 }

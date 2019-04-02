@@ -32,7 +32,8 @@ public class Main {
         break;
       case 4:
         Car.car();
-        SUV.pimpedOutSUV();
+        SUV mySUV = new SUV();
+        mySUV.pimpedOutSUV();
         break;
       default:
         System.out.println("Invalid selection, please type a number");
