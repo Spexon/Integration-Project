@@ -4,7 +4,7 @@ import java.util.Random;
 import java.util.Scanner;
 
 // Vladimir Hardy
-// A program integrating skills learned form COP 2006
+// A simple game where you guess try to guess a random word (hangman)
 public class Hangman {
 
   public static void hangman() {
@@ -40,7 +40,8 @@ public class Hangman {
           hintForWord(word, guess);
           // System.out.println("The word is an outer space entity");
         } else if (guess.equalsIgnoreCase(word)) {
-          restartGame(playAgain, input, guess); // This is a call, in parenthesis would be an argument
+          restartGame(playAgain, input, guess); // This is a call, in parenthesis would be an
+                                                // argument
           break; // Quits the loop when user guesses the correct word
         } else if (guess.equalsIgnoreCase(letterP) || guess.equalsIgnoreCase(letterL)
             || guess.equalsIgnoreCase(letterA) || guess.equalsIgnoreCase(letterN)
@@ -93,7 +94,7 @@ public class Hangman {
       playAgain = true;
     } else {
       System.out.println("Thanks for playing!");
-      //playAgain = false; //doesn't do anything
+      // playAgain = false; //doesn't do anything
     }
     return restart;
   }

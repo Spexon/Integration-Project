@@ -2,10 +2,6 @@ package src;
 
 import java.util.Scanner;
 
-// change?
-
-
-
 // Vladimir Hardy
 // A program integrating skills learned form COP 2006, as well as fulfilling PSI requirements
 public class Introduction {
@@ -126,18 +122,31 @@ public class Introduction {
     if (userWord1.equals(userWord2))
       // When comparing strings, you cannot use == because their location in memory isn't the same
       System.out.println("Your word is exactly the same");
-    
+
     input.close();
   }
-  
+
   static void normalMethod() {
-    //@Override
+    // @Override
     System.out.println("This is a normal method");
   }
 }
+
+
 class MethodOverride extends Introduction {
-static void normalMethod() {
+  static void normalMethod() {
     System.out.println("This method overrides the normal method");
+    System.out.println("The next two entities are in an overloaded method 'draw'");
+  }
+
+  public static void draw(String s) {
+    String word = "Bicycle";
+    System.out.println(word);
+  }
+
+  public static void draw(int i) {
+    int number = 10;
+    System.out.println(number);
   }
 }
 
@@ -147,5 +156,8 @@ static void normalMethod() {
  * examples are: byte, int, float and Boolean. Use: Ctrl + shift + F for the auto formatter to run
  * Operator precedence in java have certain priority in execution. Usually, operators that are used
  * less have higher precedence than operators that are used more frequently; for example:
- * multiplicative operators (* /) have more precedence than the assignment operator (=).
+ * multiplicative operators (* /) have more precedence than the assignment operator (=). Inheritance
+ * is the use of parent and child classes that inherit common characteristics of other classes. The
+ * benefits of inheritance is that one super class can contain many different characteristics that
+ * all relate to each other.
  */
