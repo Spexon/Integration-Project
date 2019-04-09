@@ -67,6 +67,5 @@ public class Calculator {
      * = input.nextLine(); if (playAgain.equals("yes")) { restart = true; } else { restart = false;
      * System.out.println("Have a nice day!"); }
      */
-    input.close();
   }
 }

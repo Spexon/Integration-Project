@@ -75,7 +75,7 @@ public class Hangman {
       } else {
       }
     }
-    input.close();
+    
   }
 
   public static int numberGenerator() { // Use this when adding more words to guess

@@ -57,8 +57,7 @@ public class Main {
           System.out.println("Invalid selection, please type a number");
       }
       System.out.println("Would you like to see more? (yes or no)");
-      String restart = input.nextLine();
-      System.out.println(restart);
+      String restart = input.next();
       if (restart.equals("yes")) {
         tryAgain = true;
         input.reset();

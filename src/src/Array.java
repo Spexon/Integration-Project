@@ -18,15 +18,15 @@ public class Array {
       arraySum += numbers[inc];
     }
     System.out.println("The sum of this array is " + arraySum);
-
-    for (int inc = 0; inc < numbersRandom.length; inc++) {
-      if (numbersRandom[inc] < numbersRandom.length-1) {
-        if (numbersRandom[inc] < numbersRandom.length-2) {
-          if (numbersRandom[inc] < numbersRandom.length-3) {
-            
-          }
-        }
+    int smallestNum = numbersRandom[0];
+    for (int inc = 1; inc < numbersRandom.length; inc++) {
+      if (numbersRandom[inc] < smallestNum) {
+    	  smallestNum = numbersRandom[inc];
+      }
+      else {
+    	  continue;
       }
     }
+    System.out.println(smallestNum);
   }
 }

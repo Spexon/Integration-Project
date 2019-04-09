@@ -123,7 +123,6 @@ public class Introduction {
       // When comparing strings, you cannot use == because their location in memory isn't the same
       System.out.println("Your word is exactly the same");
 
-    input.close();
   }
 
   static void normalMethod() {
