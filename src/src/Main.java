@@ -18,21 +18,27 @@ public class Main {
       System.out.println("3. Calculator");
       System.out.println("4. Car");
       System.out.println("5. Array");
+      System.out.println("6. Polymorphism");
 
       int menu = 0;
-
-      try {
-        menu = input.nextInt();
-      } catch (InputMismatchException ex) { // Specific exception handling
-        System.out.println("Please enter a whole number");
-        input.nextLine(); // Gets rid of garbage input
-      } catch (Exception ex) { // More general exception
-        System.out.println("Please enter a whole number");
-        input.nextLine();
-      }
+      boolean reLoop = false;
+      do {
+        try {
+          menu = input.nextInt();
+        } catch (InputMismatchException ex) { // Specific exception handling
+          System.out.println("Please enter a whole number");
+          input.nextLine(); // Gets rid of garbage input
+          continue;
+        } catch (Exception ex) { // More general exception
+          System.out.println("Please enter a whole number");
+          input.nextLine();
+          reLoop = true;
+          continue;
+        }
+        reLoop = false;
+      } while (reLoop);
       switch (menu) {
         case 1:
-
           Introduction.intro();
           Introduction.normalMethod();
           MethodOverride.normalMethod();
@@ -53,12 +59,17 @@ public class Main {
         case 5:
           Array.array();
           break;
+        case 6:
+          Polymorphism.polymorphism();
+          break;
         default:
           System.out.println("Invalid selection, please type a number");
+          tryAgain = true;
+          continue;
       }
       System.out.println("Would you like to see more? (yes or no)");
       String restart = input.next();
-      if (restart.equals("yes")) {
+      if (restart.equalsIgnoreCase("yes")) {
         tryAgain = true;
         input.reset();
       } else {
