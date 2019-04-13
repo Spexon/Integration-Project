@@ -10,8 +10,12 @@ public class Polymorphism {
 
     System.out.println("My preffered console is " + computer.showConsole());
     System.out.println("My favorite computer games are " + ComputerGame.myComputerGame());
+
+    System.out.println("My brother loves to play" + xbox.showConsole());
+    // System.out.println("But I think that " + xbox.xboxOpinion());
   }
 }
+
 
 class Console {
   public String showConsole() {
@@ -19,8 +23,9 @@ class Console {
   }
 }
 
+
 class Xbox extends Console {
-  public void xbox() {
+  public static void xboxOpinion() {
     System.out.println("Xbox is for casual gamers, yes I said it");
   }
 
@@ -29,8 +34,9 @@ class Xbox extends Console {
   }
 }
 
+
 class PlayStation extends Console {
-  public void ps4() {
+  public static void ps4() {
     System.out.println("Playstation is for casual gamers, just like xbox");
   }
 
@@ -38,6 +44,7 @@ class PlayStation extends Console {
     return "Playstation";
   }
 }
+
 
 class Computer extends Console {
   public void computer() {
@@ -49,11 +56,13 @@ class Computer extends Console {
   }
 }
 
+
 class PSGame extends PlayStation {
   public void myPlayStationGame() {
     System.out.println("The Last Of Us");
   }
 }
+
 
 class XboxGame extends Xbox {
   public void halo() {
@@ -64,6 +73,7 @@ class XboxGame extends Xbox {
     System.out.println("Halo, For Honor, Red Dead Redemption 2");
   }
 }
+
 
 class ComputerGame extends Computer {
   public void steam() {
