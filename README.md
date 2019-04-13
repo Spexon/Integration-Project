@@ -145,3 +145,33 @@ Use break in a loop with a comment describing what it does  (CLASS HANGMAN LINE 
 
 Use continue in a loop with a comment describing what it does (CLASS INTRODUCTION LINE 111)
 >>>>>>> branch 'master' of https://github.com/Spexon/Integration-Project.git
+
+PSI 3:
+
+Private classes, public getters and setters, constructors 
+
+Use Super and this to access objects and constructors
+
+effectively utilize exception handling
+
+overload a method
+
+describe inheritance and its benefits
+
+declare, instantiate, initialize and use 1D arrays
+
+Develop code that makes use of polymorphism
+
+get a sum of values in an array using an accumulator
+
+manually find the smallest value in an array
+
+search an array and identify the index where a value was found
+
+declare, instantialize and use multidimentional arrays
+
+Search a 2D array and identify the coordinates where a value was found
+
+Declare and use an ArrayList of a given type
+
+Create and use the enhanced for loop
