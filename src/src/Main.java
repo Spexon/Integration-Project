@@ -55,6 +55,7 @@ public class Main {
           Car.car();
           SUV mySUV = new SUV();
           mySUV.pimpedOutSUV();
+          mySUV.normalSUV();
           break;
         case 5:
           Array.array();

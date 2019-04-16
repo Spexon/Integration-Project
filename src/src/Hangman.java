@@ -1,5 +1,6 @@
 package src;
 
+import java.util.ArrayList;
 import java.util.Random;
 import java.util.Scanner;
 
@@ -28,6 +29,7 @@ public class Hangman {
       String letterTracker = "";
       String guess;// <-- change string to char when array is working
       String underscore = "______";
+      ArrayList<String> letters = new ArrayList<String>();
       String letterP = word.substring(0, 1);
       String letterL = word.substring(1, 2);
       String letterA = word.substring(2, 3);

@@ -9,7 +9,8 @@ public class Introduction {
   // Void is the return type, meaning this method doesn't return anything
   // Method names should be in lowerCamelCase and be named with a verb
 
-  public static void intro() { // cant have multiple mains!
+  public static void intro() {
+	Scanner input = new Scanner(System.in);
     System.out.println("Welcome to my Integration Project introduction");
     // ctrl + space for sysout
     final double SALES_TAX = 0.25; // Final makes the variable unchangeable throughout the code
@@ -28,7 +29,7 @@ public class Introduction {
     double doubleValue = 40.6;
 
     // Print the sum of both integer variables on a new line.
-    System.out.println("The sum of two integers is " + (int1 + int2));
+    System.out.println("The sum of two integers (2 and 2) is " + (int1 + int2));
     // Print the sum of the double variables on a new line.
     System.out.println("The sum of the same two doubles is " + (double1 + double2));
     // Concatenate and print the String variables on a new line.
@@ -39,10 +40,8 @@ public class Introduction {
     intValue = (int) doubleValue; // doubleValue is being casted into a intValue as an
     // integer, however the decimal is being truncated System.out.println(intValue);
     // SALES_TAX = 0.30; Cannot change SALES_TAX because it's a final variable
+    System.out.println(intValue);
     System.out.println(SALES_TAX);
-    Card myCard = new Card();
-    myCard.setSuite("Clubs");
-    Scanner input = new Scanner(System.in);
     System.out.println("Type any negative number");
     double negativeNumber = input.nextDouble();
     double positiveNumber = Math.abs(negativeNumber);
