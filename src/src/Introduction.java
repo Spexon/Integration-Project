@@ -2,18 +2,25 @@ package src;
 
 import java.util.Scanner;
 
-// Vladimir Hardy
-// A program integrating skills learned form COP 2006, as well as fulfilling PSI requirements
+
+
+/**
+ * A program integrating skills learned form COP 2006, which also fulfills
+ * the PSI requirements.
+ * @author Vladimir Hardy 
+ */
 public class Introduction {
   // This is a header, 'public' is an access modifier
   // Void is the return type, meaning this method doesn't return anything
   // Method names should be in lowerCamelCase and be named with a verb
 
+  /**
+   * This method is the body of the introduction.
+   */
   public static void intro() {
-	Scanner input = new Scanner(System.in);
     System.out.println("Welcome to my Integration Project introduction");
     // ctrl + space for sysout
-    final double SALES_TAX = 0.25; // Final makes the variable unchangeable throughout the code
+    final double SAlES_tAX = 0.25; // Final makes the variable unchangeable throughout the code
     // Scope refers to the block of code belonging to a method following its declaration
     int int1 = 2; // Holds a whole number
     double double1 = 2.0; // Holds values with decimal values
@@ -25,9 +32,6 @@ public class Introduction {
     String string2 = "2";
     String escape = "Bobby said: \"Dont eat the last cookie\"";
     // Example of an escape sequence inside a string
-    int intValue = 550;
-    double doubleValue = 40.6;
-
     // Print the sum of both integer variables on a new line.
     System.out.println("The sum of two integers (2 and 2) is " + (int1 + int2));
     // Print the sum of the double variables on a new line.
@@ -37,12 +41,15 @@ public class Introduction {
     // every time you switch from numbers to strings, clear using Scan.nextLine();
     System.out.println(boolean1);
     System.out.println(escape);
+    int intValue = 550;
+    double doubleValue = 40.6;
     intValue = (int) doubleValue; // doubleValue is being casted into a intValue as an
     // integer, however the decimal is being truncated System.out.println(intValue);
     // SALES_TAX = 0.30; Cannot change SALES_TAX because it's a final variable
     System.out.println(intValue);
-    System.out.println(SALES_TAX);
+    //System.out.println(SALES_TAX);
     System.out.println("Type any negative number");
+    Scanner input = new Scanner(System.in);
     double negativeNumber = input.nextDouble();
     double positiveNumber = Math.abs(negativeNumber);
     System.out.println("With Math.abs your number is now: " + positiveNumber);
@@ -118,10 +125,10 @@ public class Introduction {
     int lengthOfWord = userWord2.compareTo(userWord1);
     System.out.println(
         "Your word is alphabetically/lexicographically " + lengthOfWord + " letters apart");
-    if (userWord1.equals(userWord2))
+    if (userWord1.equals(userWord2)) {
       // When comparing strings, you cannot use == because their location in memory isn't the same
       System.out.println("Your word is exactly the same");
-
+    }
   }
 
   static void normalMethod() {
@@ -129,8 +136,6 @@ public class Introduction {
     System.out.println("This is a normal method");
   }
 }
-
-
 class MethodOverride extends Introduction {
   static void normalMethod() {
     System.out.println("This method overrides the normal method");

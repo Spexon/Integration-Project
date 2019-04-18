@@ -8,6 +8,10 @@ import java.util.Scanner;
 
 public class Main {
 
+  /**
+   * Main method for the main class.
+   * @param args Driver class.
+   */
   public static void main(String[] args) {
     boolean tryAgain = true;
     Scanner input = new Scanner(System.in);
@@ -53,9 +57,9 @@ public class Main {
           break;
         case 4:
           Car.car();
-          SUV mySUV = new SUV();
-          mySUV.pimpedOutSUV();
-          mySUV.normalSUV();
+          SUV mySUv = new SUV();
+          mySUv.pimpedOutSUV();
+          mySUv.normalSUV();
           break;
         case 5:
           Array.array();
