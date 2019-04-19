@@ -8,6 +8,9 @@ import java.util.Scanner;
 
 public class Calculator {
 
+  /**
+   * Calculator that can add, subtract, multiply, and divide.
+   */
   public static void calculateMain() {
     Scanner input = new Scanner(System.in);
     boolean reLoop = false;
@@ -21,7 +24,7 @@ public class Calculator {
       System.out.println("4. Division");
       try {
         menu = input.nextInt();
-      } catch (InputMismatchException Ex) {
+      } catch (InputMismatchException ex) {
         System.out.println("Please type a number");
         input.next();
         reLoop = true;
@@ -39,7 +42,7 @@ public class Calculator {
             addition1 = input.nextDouble();
             System.out.println("Enter a second numbers to add");
             addition2 = input.nextDouble();
-          } catch (InputMismatchException Ex) {
+          } catch (InputMismatchException ex) {
             System.out.println("Please type a number");
             input.next();
             reLoop = true;
@@ -60,7 +63,7 @@ public class Calculator {
             subtraction1 = input.nextDouble();
             System.out.println("Enter a second numbers to subtract");
             subtraction2 = input.nextDouble();
-          } catch (InputMismatchException Ex) {
+          } catch (InputMismatchException ex) {
             System.out.println("Please type a number");
             input.next();
             reLoop = true;
@@ -81,7 +84,7 @@ public class Calculator {
             multiply1 = input.nextDouble();
             System.out.println("Enter a second numbers to multiply");
             multiply2 = input.nextDouble();
-          } catch (InputMismatchException Ex) {
+          } catch (InputMismatchException ex) {
             System.out.println("Please type a number");
             input.next();
             reLoop = true;
@@ -103,7 +106,7 @@ public class Calculator {
             divide1 = input.nextDouble();
             System.out.println("Enter a second numbers to divide");
             divide2 = input.nextDouble();
-          } catch (InputMismatchException Ex) {
+          } catch (InputMismatchException ex) {
             System.out.println("Please type a number");
             input.next();
             reLoop = true;
@@ -111,9 +114,8 @@ public class Calculator {
           }
           try {
             totalDivision = divide1 / divide2;
-          }
           // For some reason doubles don't cause an exception when divided by zero.
-          catch (ArithmeticException Ex) {
+          } catch (ArithmeticException ex) {
             System.out.println("Cannot divide by 0");
             input.next();
             reLoop = true;

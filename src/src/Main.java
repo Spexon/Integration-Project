@@ -8,6 +8,10 @@ import java.util.Scanner;
 
 public class Main {
 
+  /**
+   * Main method for the main class.
+   * @param args Driver class.
+   */
   public static void main(String[] args) {
     boolean tryAgain = true;
     Scanner input = new Scanner(System.in);
@@ -19,6 +23,7 @@ public class Main {
       System.out.println("4. Car");
       System.out.println("5. Array");
       System.out.println("6. Polymorphism");
+      System.out.println("7. WordsForHangman (TESTING)");
 
       int menu = 0;
       boolean reLoop = false;
@@ -63,6 +68,9 @@ public class Main {
         case 6:
           Polymorphism.polymorphism();
           break;
+        case 7:
+        	WordsForHangman.words(null,null,0);
+        	break;
         default:
           System.out.println("Invalid selection, please type a number");
           tryAgain = true;

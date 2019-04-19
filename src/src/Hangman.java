@@ -1,27 +1,19 @@
 package src;
 
-import java.util.ArrayList;
-import java.util.Random;
 import java.util.Scanner;
 
 // Vladimir Hardy
 // A simple game where you guess try to guess a random word (hangman)
-public class Hangman {
+public class Hangman extends WordsForHangman {
 
   public static void hangman() {
 
     Scanner input = new Scanner(System.in);
     boolean playAgain = true;
-    /*
-     * String[] word = arrayForWord(); int increment=0; String letter; while(increment<6) { letter =
-     * arrayForWord()[increment]; increment++; }
-     */
     while (playAgain) {
-      String word = "planet"; // create a new class for this (String word = new word)
-
+      String word = words(null,null,0);
       String hint = "hint";
       int lives = 5;
-
       System.out.println("Welcome to my integration project, Hangman! "
           + "Your goal is to guess this word correctly, \nyou get guesses " + lives
           + " to correctly answer the word or its game over. Type \'hint\' for a hint."
@@ -29,8 +21,14 @@ public class Hangman {
       String wordBank = "";
       String guess;
       String underscoreArray[] = {"_","_","_","_","_","_"};
-      String letterArray[] = {"p","l","a","n","e","t"};
-      
+      int wordSize = word.length();
+      String wordArray[] = new String[wordSize];
+      for (int inc = 0; inc<wordSize;inc++) {
+    	  wordArray[inc] = word.substring(inc, inc++);
+    	  System.out.println(wordArray[inc]);
+      }
+      /*String wordArray[] = {word.substring(0,1),word.substring(1,2),word.substring(2,3),
+    		  word.substring(3,4),word.substring(4,5),word.substring(5,6)};*/
       while (lives >= 1) {
         guess = input.nextLine();
         wordBank += guess;
@@ -43,12 +41,12 @@ public class Hangman {
                                                 		   // argument
           break; // Quits the loop when user guesses the correct word
         }
-        else if (guess.equalsIgnoreCase(letterArray[0]) || guess.equalsIgnoreCase(letterArray[1]) || 
-        		guess.equalsIgnoreCase(letterArray[2]) || guess.equalsIgnoreCase(letterArray[3])  ||
-        	    guess.equalsIgnoreCase(letterArray[4]) || guess.equalsIgnoreCase(letterArray[5])) { //Array
+        else if (guess.equalsIgnoreCase(wordArray[0]) || guess.equalsIgnoreCase(wordArray[1]) || 
+        		guess.equalsIgnoreCase(wordArray[2]) || guess.equalsIgnoreCase(wordArray[3])  ||
+        	    guess.equalsIgnoreCase(wordArray[4]) || guess.equalsIgnoreCase(wordArray[5])) { //Array
             String underscore = "";
             for (int inc=0; inc < underscoreArray.length;inc++) {
-            	if (guess.equals(letterArray[inc])) {
+            	if (guess.equals(wordArray[inc])) {
             		underscoreArray[inc] = guess;
             	}
             	underscore += underscoreArray[inc];
@@ -81,15 +79,8 @@ public class Hangman {
     }
   }
 
-  public static int numberGenerator() { // Use this when adding more words to guess
-    Random rndNum = new Random();
-    int restartNum = rndNum.nextInt(2);
-    return restartNum;
-  }
-
   public static boolean restartGame(boolean playAgain, Scanner input, String guess) {
     // This is a header. A parameter is inside parenthesis after string
-	
     System.out.println("You guessed " + guess + " which is correct! " + "Congratulations you won!");
     System.out.println("Would you like to test your luck and play again? (Yes or No)");
     String restart = input.nextLine();
@@ -98,7 +89,7 @@ public class Hangman {
       playAgain = true;
     } else {
       System.out.println("Thanks for playing!");
-      playAgain = false; //doesn't do anything
+      playAgain = false;
     }
     return (playAgain);
   }
