@@ -7,18 +7,13 @@ import java.util.Random;
 public class WordsForHangman {
 
 	public static String words(String word,String[] wordArray, int restartNum) {
-		String word1 = "Planet"; //ArrayList could work really well for this
-		String word2 = "Tiger";
-		String word3 = "Human";
-		String word4 = "Apple";
-		String word5 = "Shuttle";
-		String[] wordArray1 = {"P","l","a","n","e","t"};
-		String[] wordArray2 = {"T","i","g","e","r"};
-		String[] wordArray3 = {"H","u","m","a","n"};
-		String[] wordArray4 = {"A","p","p","l","e"};
-		String[] wordArray5 = {"S","h","u","t","t","l","e"};
+		String word1 = "planet"; //ArrayList could work really well for this
+		String word2 = "tiger";
+		String word3 = "human";
+		String word4 = "apple";
+		String word5 = "shuttle";
 		restartNum = numberGenerator();
-		System.out.println(restartNum);
+		
 		if (restartNum == 1) {
 			word = word1;
 			//wordArray[] = wordArray1[]; //can't change size of array?
@@ -35,7 +30,8 @@ public class WordsForHangman {
 		else {
 			word = word5;
 		}
-		System.out.println(word);
+		//System.out.println(restartNum);
+		//System.out.println(word);
 		return word;
 	}
 

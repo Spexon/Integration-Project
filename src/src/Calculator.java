@@ -7,7 +7,6 @@ import java.util.Scanner;
 // basic calculator
 
 public class Calculator {
-
   /**
    * Calculator that can add, subtract, multiply, and divide.
    */
