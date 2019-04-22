@@ -3,9 +3,9 @@ package src;
 import java.util.InputMismatchException;
 import java.util.Scanner;
 
-// Vladimir Hardy
-// Menu for all the classes in my integration project
-
+/** Menu for all the classes in my integration project.
+ * @author Vladimir Hardy
+ */
 public class Main {
 
   /**
@@ -57,9 +57,9 @@ public class Main {
           break;
         case 4:
           Car.car();
-          SUV mySUv = new SUV();
-          mySUv.pimpedOutSUV();
-          mySUv.normalSUV();
+          SUv mySUv = new SUv();
+          mySUv.pimpedOutSUv();
+          mySUv.normalSUv();
           break;
         case 5:
           Array.array();

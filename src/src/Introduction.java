@@ -136,22 +136,6 @@ public class Introduction {
     System.out.println("This is a normal method");
   }
 }
-class MethodOverride extends Introduction {
-  static void normalMethod() {
-    System.out.println("This method overrides the normal method");
-    System.out.println("The next two entities are in an overloaded method 'draw'");
-  }
-
-  public static void draw(String s) {
-    String word = "Bicycle";
-    System.out.println(word);
-  }
-
-  public static void draw(int i) {
-    int number = 10;
-    System.out.println(number);
-  }
-}
 
 /*
  * All Variables on Java must be declared stating its type and name before they can be used. A

@@ -8,9 +8,11 @@ import java.util.Scanner;
 // Uses arrays and arrayLists in multiple different ways
 public class Array {
 
+  /**Main method that creates and utilizes arrays.
+   * 
+   */
   public static void array() {
     Scanner input = new Scanner(System.in);
-    int numbers[] = {10, 20, 30, 40, 50, 60, 70, 80, 90, 100}; // one method of creating an array
     int[] numbersRandom = new int[5]; // Longer method to declare an array
     numbersRandom[0] = 22;
     numbersRandom[1] = 32;
@@ -37,6 +39,7 @@ public class Array {
     shoppingList.add("Bread");
     shoppingList.add("Chicken");
     int arraySum = 0;
+    int[] numbers = {10, 20, 30, 40, 50, 60, 70, 80, 90, 100}; // one method of creating an array
     // This is an accumulator that adds all the values of the array numbers
     for (int inc = 0; inc < numbers.length; inc++) {
       arraySum += numbers[inc];
@@ -60,7 +63,7 @@ public class Array {
       System.out.println("Type a number for the row between 0 and 1");
       try {
         row = input.nextInt();
-      } catch (InputMismatchException Ex) {
+      } catch (InputMismatchException ex) {
         System.out.println("Please type a number");
         input.next();
         reLoop = true;
@@ -69,7 +72,7 @@ public class Array {
       System.out.println("Type a number for the column between 0 and 5");
       try {
         column = input.nextInt();
-      } catch (InputMismatchException Ex) {
+      } catch (InputMismatchException ex) {
         System.out.println("Please type a number");
         input.next();
         reLoop = true;
@@ -79,7 +82,7 @@ public class Array {
       try {
         System.out.println("The value " + twoDArray[column][row] + " is in the row " + row
             + " and in the column " + column + " from the 2D array");
-      } catch (ArrayIndexOutOfBoundsException Ex) {
+      } catch (ArrayIndexOutOfBoundsException ex) {
         System.out.println("Please type a number between the given range");
         input.reset();
         continue;
