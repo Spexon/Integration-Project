@@ -23,7 +23,6 @@ public class Main {
       System.out.println("4. Car");
       System.out.println("5. Array");
       System.out.println("6. Polymorphism");
-      System.out.println("7. WordsForHangman (TESTING)");
 
       int menu = 0;
       boolean reLoop = false;
@@ -58,9 +57,9 @@ public class Main {
           break;
         case 4:
           Car.car();
-          SUV mySUV = new SUV();
-          mySUV.pimpedOutSUV();
-          mySUV.normalSUV();
+          SUV mySUv = new SUV();
+          mySUv.pimpedOutSUV();
+          mySUv.normalSUV();
           break;
         case 5:
           Array.array();
@@ -68,9 +67,6 @@ public class Main {
         case 6:
           Polymorphism.polymorphism();
           break;
-        case 7:
-        	WordsForHangman.words(null,null,0);
-        	break;
         default:
           System.out.println("Invalid selection, please type a number");
           tryAgain = true;

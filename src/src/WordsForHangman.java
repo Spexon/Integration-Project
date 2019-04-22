@@ -13,7 +13,7 @@ public class WordsForHangman {
 		String word4 = "apple";
 		String word5 = "shuttle";
 		restartNum = numberGenerator();
-		
+		restartNum = 5;
 		if (restartNum == 1) {
 			word = word1;
 			//wordArray[] = wordArray1[]; //can't change size of array?

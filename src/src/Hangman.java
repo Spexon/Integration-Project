@@ -22,7 +22,9 @@ public class Hangman extends WordsForHangman {
       String guess;
       int wordSize = word.length();
       String underscoreArray[] = new String[wordSize];
-      String wordArray[] = new String[wordSize + 1];
+      String wordArray[] = new String[wordSize + 2]; //this causes problems when word size differs
+     
+      //System.out.println(hangmanFigure[5]);
       for (int inc = 0; inc < wordSize; inc++) {
         wordArray[inc] = word.substring(inc, inc + 1);
         underscoreArray[inc] = "_";
@@ -42,7 +44,8 @@ public class Hangman extends WordsForHangman {
           break; // Quits the loop when user guesses the correct word
         } else if (guess.equalsIgnoreCase(wordArray[0]) || guess.equalsIgnoreCase(wordArray[1])
             || guess.equalsIgnoreCase(wordArray[2]) || guess.equalsIgnoreCase(wordArray[3])
-            || guess.equalsIgnoreCase(wordArray[4]) || guess.equalsIgnoreCase(wordArray[5])) { // Array
+            || guess.equalsIgnoreCase(wordArray[4]) || guess.equalsIgnoreCase(wordArray[5]) 
+            || guess.equalsIgnoreCase(wordArray[6])) { 
           String underscore = "";
           if (guess.equals(previousGuesses)) {
             previousGuesses += guess;
@@ -74,13 +77,54 @@ public class Hangman extends WordsForHangman {
             previousGuesses += guess;
           }
           int incorrectSizeLetter = guess.length();
-          if (incorrectSizeLetter != 1) {
+          if (incorrectSizeLetter != 0 || incorrectSizeLetter != 1) {
             System.out.println(""
                 + "Please type one letter at a time! or the whole word if you know it.");
           }
+          String hangmanFigure[] = new String[5];
+          hangmanFigure[0] = "\n"
+         		 +"|\n"
+         		 +"|\n"
+         		 +"|\n"
+         		 +"|\n"
+         		 +"|\n"
+         		 +"|\n"
+         		 +"|___\n";
+          hangmanFigure[1] = "_________\n"
+         		 +"|/      |\n"
+         		 +"|\n"
+         		 +"|\n"
+         		 +"|\n"
+         		 +"|\n"
+         		 +"|\n"
+         		 +"|___\n";
+          hangmanFigure[2] = "_________\n"
+         		 +"|/      |\n"
+         		 +"|     (._.)\n"
+         		 +"|\n"
+         		 +"|\n"
+         		 +"|\n"
+         		 +"|\n"
+         		 +"|___\n";
+          hangmanFigure[3] = "_________\n"
+         		 +"|/      |\n"
+         		 +"|     (._.)\n"
+         		 +"|      \\|/\n"
+         		 +"|       |\n"
+         		 +"|\n"
+         		 +"|\n"
+         		 +"|___\n";
+          hangmanFigure[4] = "_________\n"
+        		 +"|/      |\n"
+        		 +"|     (x_x)\n"
+        		 +"|      /|\\\n"
+        		 +"|       |\n"
+        		 +"|      / \\\n"
+        		 +"|\n"
+        		 +"|___\n";
           lives--;
+          System.out.println(hangmanFigure[(lives-4)*-1]);
           System.out.println("Incorrect! you have " + lives + " guesses left");
-          
           input = new Scanner(System.in); // Method call to constructor
         }
       }
@@ -120,4 +164,3 @@ public class Hangman extends WordsForHangman {
     System.out.println("The word is " + lengthWord + " letters long");
   }
 }
-
