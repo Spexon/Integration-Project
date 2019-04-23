@@ -74,7 +74,8 @@ public class Main {
       }
       System.out.println("Would you like to see more? (yes or no)");
       String restart = input.next();
-      if (restart.equalsIgnoreCase("yes")) {
+      restart = restart.trim();
+      if (restart.equalsIgnoreCase("yes") || restart.equalsIgnoreCase("y")) {
         tryAgain = true;
         input.reset();
       } else {
