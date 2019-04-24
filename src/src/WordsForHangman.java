@@ -11,7 +11,7 @@ public class WordsForHangman {
    * @param restartNum the random number that picks a word.
    * @return returns the word that the user will need to guess.
    */
-  public static String words(String word, int restartNum) {
+  public static String words(String word,String hint, int restartNum) {
     String word1 = "planet"; // ArrayList could work really well for this
     String word2 = "tiger";
     String word3 = "human";
@@ -20,7 +20,6 @@ public class WordsForHangman {
     restartNum = numberGenerator();
     if (restartNum == 1) {
       word = word1;
-      // wordArray[] = wordArray1[]; //can't change size of array?
     } else if (restartNum == 2) {
       word = word2;
     } else if (restartNum == 3) {

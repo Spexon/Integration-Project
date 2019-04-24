@@ -11,8 +11,7 @@ public class Array {
   /**Main method that creates and utilizes arrays.
    * 
    */
-  public static void array() {
-    Scanner input = new Scanner(System.in);
+  public static void array(Scanner input) {
     int[] numbersRandom = new int[5]; // Longer method to declare an array
     numbersRandom[0] = 22;
     numbersRandom[1] = 32;
@@ -90,7 +89,7 @@ public class Array {
       reLoop = false;
     } while (reLoop);
     for (String str : shoppingList) { // Enhanced for loop
-      System.out.println("Shopping list is " + str);
+      System.out.println("Shopping list: " + str);
     }
   }
 }

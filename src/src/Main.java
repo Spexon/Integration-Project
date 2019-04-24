@@ -23,6 +23,7 @@ public class Main {
       System.out.println("4. Car");
       System.out.println("5. Array");
       System.out.println("6. Polymorphism");
+      System.out.println("7. Quit");
 
       int menu = 0;
       boolean reLoop = false;
@@ -43,17 +44,17 @@ public class Main {
       } while (reLoop);
       switch (menu) {
         case 1:
-          Introduction.intro();
+          Introduction.intro(input);
           Introduction.normalMethod();
           MethodOverride.normalMethod();
           MethodOverride.draw(null);
           MethodOverride.draw(menu);
           break;
         case 2:
-          Hangman.hangman();
+          Hangman.hangman(input);
           break;
         case 3:
-          Calculator.calculateMain();
+          Calculator.calculateMain(input);
           break;
         case 4:
           Car.car();
@@ -62,10 +63,12 @@ public class Main {
           mySUv.normalSUv();
           break;
         case 5:
-          Array.array();
+          Array.array(input);
           break;
         case 6:
           Polymorphism.polymorphism();
+          break;
+        case 7:
           break;
         default:
           System.out.println("Invalid selection, please type a number");
