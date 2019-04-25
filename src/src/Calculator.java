@@ -10,8 +10,7 @@ public class Calculator {
   /**
    * Calculator that can add, subtract, multiply, and divide.
    */
-  public static void calculateMain() {
-    Scanner input = new Scanner(System.in);
+  public static void calculateMain(Scanner input) {
     boolean reLoop = false;
     int menu = 0;
     do {

@@ -13,12 +13,11 @@ public class Hangman extends WordsForHangman {
    * The main program for hangman, which is also the program that I put most of my time developing.
    * 
    */
-  public static void hangman() {
-
-    Scanner input = new Scanner(System.in);
+  public static void hangman(Scanner input) {
+    input.nextLine();
     boolean playAgain = true;
     while (playAgain) {
-      String word = words(null, 0);
+      String word = words(0);
       String hint = "hint";
       int lives = 5;
       System.out.println("Welcome to my integration project, Hangman! "
@@ -36,14 +35,15 @@ public class Hangman extends WordsForHangman {
         underscoreArray[inc] = "_";
       }
       String previousGuesses = "";
+      int hintCounter = 0;
       while (lives >= 1) {
+
         guess = input.nextLine();
         guess = guess.trim();
 
         if (guess.equalsIgnoreCase(hint)) {
-          hintForWord(word, guess);
+          hintCounter = hintForWord(hintCounter, wordArray);
           continue;
-          // System.out.println("The word is an outer space entity");
         } else if (guess.equalsIgnoreCase(word)) {
           playAgain = restartGame(playAgain, input, guess); //
           // This is a call, in parenthesis would be an argument
@@ -120,7 +120,6 @@ public class Hangman extends WordsForHangman {
     }
   }
 
-
   /**
    * Restarts game method when the user guesses the word correctly.
    * 
@@ -145,8 +144,23 @@ public class Hangman extends WordsForHangman {
     return (playAgain);
   }
 
-  public static void hintForWord(String word, String guess) {
-    int lengthWord = word.length();
-    System.out.println("The word is " + lengthWord + " letters long");
+  /**
+   * Gives the first two letters of the word if user asks for a hint.
+   * 
+   * @param hintCounter keeps track of how many hints the user used.
+   * @param wordArray Brings in the word that is being used to be able to give a hint.
+   * @return hintCounter allows incrementation.
+   */
+  public static int hintForWord(int hintCounter, String[] wordArray) {
+
+    if (hintCounter == 0) {
+      System.out.println("The first letter of the word is: " + wordArray[0]);
+    } else if (hintCounter == 1) {
+      System.out.println("The second letter of the word is: " + wordArray[1]);
+    } else {
+      System.out.println("No more hints avaliable.");
+    }
+    hintCounter++;
+    return hintCounter;
   }
 }

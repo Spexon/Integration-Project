@@ -17,11 +17,13 @@ public class Introduction {
   /**
    * This method is the body of the introduction.
    */
-  public static void intro() {
-    System.out.println("Welcome to my Integration Project introduction");
+  public static void intro(Scanner input) {
+    System.out.println("Welcome to my Integration Project introduction, this method is not user"
+        + "friendly. Type 'quit' any time to quit.");
     // ctrl + space for sysout
     final double SAlES_tAX = 0.25; // Final makes the variable unchangeable throughout the code
     // Scope refers to the block of code belonging to a method following its declaration
+    System.out.println("The final value that cannot be changed for sales Tax is " + SAlES_tAX);
     int int1 = 2; // Holds a whole number
     double double1 = 2.0; // Holds values with decimal values
     String string1 = "2"; // Holds a sequence of characters
@@ -49,7 +51,6 @@ public class Introduction {
     System.out.println(intValue);
     //System.out.println(SALES_TAX);
     System.out.println("Type any negative number");
-    Scanner input = new Scanner(System.in);
     double negativeNumber = input.nextDouble();
     double positiveNumber = Math.abs(negativeNumber);
     System.out.println("With Math.abs your number is now: " + positiveNumber);
