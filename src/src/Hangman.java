@@ -14,10 +14,10 @@ public class Hangman extends WordsForHangman {
    * 
    */
   public static void hangman(Scanner input) {
-
+    input.nextLine();
     boolean playAgain = true;
     while (playAgain) {
-      String word = words(null, null, 0);
+      String word = words(0);
       String hint = "hint";
       int lives = 5;
       System.out.println("Welcome to my integration project, Hangman! "
@@ -37,6 +37,7 @@ public class Hangman extends WordsForHangman {
       String previousGuesses = "";
       int hintCounter = 0;
       while (lives >= 1) {
+
         guess = input.nextLine();
         guess = guess.trim();
 
@@ -118,7 +119,6 @@ public class Hangman extends WordsForHangman {
       }
     }
   }
-
 
   /**
    * Restarts game method when the user guesses the word correctly.

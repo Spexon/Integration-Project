@@ -84,6 +84,7 @@ public class Array {
       } catch (ArrayIndexOutOfBoundsException ex) {
         System.out.println("Please type a number between the given range");
         input.reset();
+        reLoop = true;
         continue;
       }
       reLoop = false;
