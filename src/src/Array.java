@@ -78,13 +78,13 @@ public class Array {
         reLoop = true;
         continue;
       }
-
       try {
         System.out.println("The value " + twoDArray[column][row] + " is in the row " + row
             + " and in the column " + column + " from the 2D array");
       } catch (ArrayIndexOutOfBoundsException ex) {
         System.out.println("Please type a number between the given range");
         input.reset();
+        reLoop = true;
         continue;
       }
       reLoop = false;
