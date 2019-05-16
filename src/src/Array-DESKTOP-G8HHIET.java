@@ -77,6 +77,7 @@ public class Array {
         reLoop = true;
         continue;
       }
+
       try {
         System.out.println("The value " + twoDArray[column][row] + " is in the row " + row
             + " and in the column " + column + " from the 2D array");
@@ -88,11 +89,6 @@ public class Array {
       }
       reLoop = false;
     } while (reLoop);
-    for(int i=0; i<twoDArray.length;i++) {
-      for(int j=0;j<twoDArray.length;j++) {
-        int twoDArrayCounter =+ 1;
-      }
-    }
     for (String str : shoppingList) { // Enhanced for loop
       System.out.println("Shopping list: " + str);
     }
