@@ -1,6 +1,14 @@
 # Integration-Project
-
 Trello: https://trello.com/b/dISSVcFy
+
+[Overview](https://gyazo.com/1358f0b97f84e485d698ca6603f25326.png)
+
+## Download
+If you would like to try out this program, download the Integration.Jar and the Integration.bat files. 
+Once both files are downloaded, run the Integration.bat file and the program will begin.
+
+
+## Backlog requirements
 
 ### PSI 1:
 
