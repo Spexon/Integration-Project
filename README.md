@@ -1,4 +1,6 @@
 # Integration-Project
+This is my first ever coding project! Below I compiled all the knowledge gained from Introduction to Programming!
+
 Trello: https://trello.com/b/dISSVcFy
 
 ![Overview](https://gyazo.com/1358f0b97f84e485d698ca6603f25326.png)
